@@ -1,7 +1,17 @@
-import React from "react";
+"use client";
+
+import { useEffect } from "react";
 import { LeaderBoardIcon, QuestIcon } from "./icons";
 
 export const Sidebar = ({ sidebarActive }) => {
+  useEffect(() => {
+    if (sidebarActive) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [sidebarActive]);
+
   return (
     <aside
       className={`fixed z-40 h-full w-72 -translate-x-full transition-transform lg:relative lg:translate-x-0 ${sidebarActive ? "translate-x-0" : ""}`}
