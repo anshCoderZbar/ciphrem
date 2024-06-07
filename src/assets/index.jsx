@@ -9,6 +9,7 @@ import Twitch from "./images/Twitch.png";
 import Instargam from "./images/Instagram.png";
 import Hours from "./images/24_hours.png";
 import Attach from "./images/Attach.png";
+import User from "./images/avatar.png";
 
 export const ASSETS = {
   HEADER_LOGO: Logo,
@@ -22,4 +23,5 @@ export const ASSETS = {
   HERO_2_IMG: HeroImg2,
   HOURS: Hours,
   ATTACH: Attach,
+  USER: User,
 };
