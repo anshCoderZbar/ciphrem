@@ -5,14 +5,14 @@ import { LockKeyhole } from "lucide-react";
 export const XpCards = ({ details }) => {
   return (
     <div
-      className={`relative rounded-2xl bg-[#0F0F13] p-5`}
+      className={`relative rounded-xl bg-[#0F0F13] p-2 sm:p-3 md:p-4 lg:p-5`}
       style={{
         mixBlendMode: details?.isLocked && "exclusion",
       }}
     >
       <div className="flex h-full w-full flex-col justify-between">
         <div
-          className="relative flex w-full items-center justify-between gap-4 rounded-2xl px-7 py-3 text-lg font-semibold text-white"
+          className="relative flex w-full items-center justify-between gap-1 rounded-xl px-4 py-3 text-base font-semibold text-white sm:px-5 md:rounded-2xl md:text-lg"
           style={{
             background: details?.isLocked
               ? "linear-gradient(90deg, rgba(41,41,41,1) 0%, rgba(100,100,100,1) 100%)"
@@ -34,9 +34,9 @@ export const XpCards = ({ details }) => {
             />
           </div>
         </div>
-        <div className="py-4">
+        <div className="py-3 lg:py-4 2xl:py-5">
           <h4
-            className={`text-xl font-semibold ${details?.isLocked ? "text-[#8F8F8F]" : "text-white"}`}
+            className={`text-sm font-semibold md:text-base lg:text-lg 2xl:text-xl ${details?.isLocked ? "text-[#8F8F8F]" : "text-white"}`}
           >
             {details?.heading}
           </h4>
@@ -47,9 +47,9 @@ export const XpCards = ({ details }) => {
             className="rounded-full bg-[#090909] p-3 no-underline"
           >
             {details?.isLocked ? (
-              <Image src={ASSETS.ATTACH} alt="twitch" className="w-6" />
+              <Image src={ASSETS.ATTACH} alt="twitch" className="w-4 sm:w-6" />
             ) : (
-              <Image src={ASSETS.Twitch} alt="twitch" className="w-6" />
+              <Image src={ASSETS.Twitch} alt="twitch" className="w-4 sm:w-6" />
             )}
           </a>
           <a
@@ -58,11 +58,15 @@ export const XpCards = ({ details }) => {
           >
             {details?.isLocked ? (
               <div className="flex gap-3">
-                <Image src={ASSETS.HOURS} alt="twitch" className="w-6" />
+                <Image src={ASSETS.HOURS} alt="twitch" className="w-4 sm:w-6" />
                 <span className="text-[#8F8F8F]">Daily</span>
               </div>
             ) : (
-              <Image src={ASSETS.Instargam} alt="instagram" className="w-6" />
+              <Image
+                src={ASSETS.Instargam}
+                alt="instagram"
+                className="w-4 sm:w-6"
+              />
             )}
           </a>
         </div>

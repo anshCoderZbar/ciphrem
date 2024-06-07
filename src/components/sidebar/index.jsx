@@ -14,7 +14,7 @@ export const Sidebar = ({ sidebarActive }) => {
 
   return (
     <aside
-      className={`fixed z-40 h-full w-72 -translate-x-full transition-transform lg:relative lg:translate-x-0 ${sidebarActive ? "translate-x-0" : ""}`}
+      className={`fixed z-40 h-full min-h-screen w-72 -translate-x-full transition-transform lg:relative lg:translate-x-0 ${sidebarActive ? "translate-x-0" : ""}`}
     >
       <div className="h-full overflow-y-auto bg-black px-3 py-3">
         <ul className="space-y-2 font-medium sm:space-y-3">
