@@ -12,7 +12,7 @@ export const Header = ({ sidebarActive, setSidebarActive }) => {
           <Image src={ASSETS.HEADER_LOGO} alt="header_logo" />
         </div>
         <div className="">
-          <h3 className="mr-4 text-sm font-semibold text-[#67A3D2] xl:text-base 2xl:text-lg">
+          <h3 className="mr-10 text-sm font-semibold text-[#67A3D2] lg:mr-0 xl:text-base 2xl:text-lg">
             Join the Cipherem community to start completing quests and claiming
             rewards.
           </h3>
