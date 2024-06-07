@@ -2,7 +2,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header, Sidebar } from "@/components";
+import { Header, Sidebar, TopLoader } from "@/components";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <TopLoader />
         <Header
           setSidebarActive={setSidebarActive}
           sidebarActive={sidebarActive}

@@ -23,7 +23,10 @@ export default function LeaderBoard() {
         <div className="pt-4">
           {new Array(15).fill(true)?.map((_, i) => {
             return (
-              <div className="flex items-center justify-between border-b-[1px] border-[#1E1E24] py-2 sm:py-3 md:py-4 lg:py-5">
+              <div
+                key={i}
+                className="flex items-center justify-between border-b-[1px] border-[#1E1E24] py-2 sm:py-3 md:py-4 lg:py-5"
+              >
                 <div className="flex items-center justify-between gap-x-4 sm:gap-x-7 lg:gap-x-9">
                   <p className="text-sm text-[#8A8A98]">
                     {`${i + 1 < 10 ? "0" : ""}${i + 1}`}.
