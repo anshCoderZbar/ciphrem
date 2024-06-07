@@ -5,9 +5,8 @@ import Link from "next/link";
 import { SidebarList } from "@/mock/Sidebar";
 import { usePathname } from "next/navigation";
 
-export const Sidebar = ({ sidebarActive }) => {
+export const Sidebar = ({ sidebarActive, setSidebarActive }) => {
   const pathname = usePathname();
-  console.log(pathname);
   useEffect(() => {
     if (sidebarActive) {
       document.body.style.overflowY = "hidden";
@@ -23,7 +22,7 @@ export const Sidebar = ({ sidebarActive }) => {
         <ul className="space-y-2 font-medium sm:space-y-3">
           {SidebarList?.map((menus) => {
             return (
-              <li key={menus?.id}>
+              <li key={menus?.id} onClick={() => setSidebarActive(false)}>
                 <Link
                   href={menus?.slug}
                   className={`group flex items-center p-2 text-sm text-white hover:bg-[#0F0F13] sm:text-base lg:text-lg ${pathname === menus?.slug ? "bg-[#0F0F13]" : "bg-none"} `}

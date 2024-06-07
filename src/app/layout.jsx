@@ -23,7 +23,10 @@ export default function RootLayout({ children }) {
           sidebarActive={sidebarActive}
         />
         <div className="grid grid-cols-1 lg:grid-cols-[288px,1fr]">
-          <Sidebar sidebarActive={sidebarActive} />
+          <Sidebar
+            setSidebarActive={setSidebarActive}
+            sidebarActive={sidebarActive}
+          />
           <main className="px-3 sm:px-4 md:px-5 lg:pl-0 lg:pr-6 xl:pr-7 2xl:pr-8">
             {children}
           </main>
