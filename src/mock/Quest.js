@@ -1,3 +1,5 @@
+import { ASSETS } from "@/assets";
+
 export const CardData = [
   {
     id: 1,
@@ -85,5 +87,32 @@ export const LockedCardData = [
     twitchUrl: "#",
     instagramUrl: "#",
     isLocked: true,
+  },
+];
+
+export const rewards = [
+  {
+    id: 1,
+    img: ASSETS.REWARD_1,
+  },
+  {
+    id: 2,
+    img: ASSETS.REWARD_2,
+  },
+  {
+    id: 3,
+    img: ASSETS.REWARD_3,
+  },
+  {
+    id: 4,
+    img: ASSETS.REWARD_4,
+  },
+  {
+    id: 5,
+    img: ASSETS.REWARD_5,
+  },
+  {
+    id: 6,
+    img: ASSETS.REWARD_6,
   },
 ];

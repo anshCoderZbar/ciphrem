@@ -12,17 +12,21 @@ body {
 }
 
 .gradient-border {
-  background-image: linear-gradient(
-    90deg,
-    rgba(15, 240, 217, 1) 0%,
-    rgba(163, 87, 245, 1) 100%
-  );
+  background-image: linear-gradient(90deg,
+      rgba(15, 240, 217, 1) 0%,
+      rgba(163, 87, 245, 1) 100%);
   border-radius: 40px;
   color: #fff;
   padding: 2px;
   position: relative;
   text-decoration: none;
   z-index: 2;
+}
+
+.gradient-background {
+  background-image: linear-gradient(90deg,
+      rgba(15, 240, 217, 1) 0%,
+      rgba(163, 87, 245, 1) 100%);
 }
 
 .gradient-border:hover {
@@ -42,4 +46,12 @@ body {
 
 .gradient-border:hover .gradient-button {
   background: transparent;
+}
+
+
+.gradient-text {
+  background: linear-gradient(to right, #0ff0d9,
+      #a357f5) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }

@@ -1,4 +1,8 @@
-import { LeaderBoardIcon, QuestIcon } from "@/components/sidebar/icons";
+import {
+  LeaderBoardIcon,
+  QuestIcon,
+  UserIcon,
+} from "@/components/sidebar/icons";
 
 export const SidebarList = [
   {
@@ -12,5 +16,11 @@ export const SidebarList = [
     pathname: "Leaderboard",
     slug: "/leaderboard",
     icon: <LeaderBoardIcon />,
+  },
+  {
+    id: 3,
+    pathname: "Profile",
+    slug: "/profile",
+    icon: <UserIcon />,
   },
 ];

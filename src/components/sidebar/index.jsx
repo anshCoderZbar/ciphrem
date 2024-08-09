@@ -25,7 +25,7 @@ export const Sidebar = ({ sidebarActive, setSidebarActive }) => {
               <li key={menus?.id} onClick={() => setSidebarActive(false)}>
                 <Link
                   href={menus?.slug}
-                  className={`group flex items-center p-2 text-sm text-white hover:bg-[#0F0F13] sm:text-base lg:text-lg ${pathname === menus?.slug ? "bg-[#0F0F13]" : "bg-none"} `}
+                  className={`group flex items-center rounded-md p-2 text-sm text-white hover:bg-[#0F0F13] sm:text-base lg:text-lg ${pathname === menus?.slug ? "bg-[#0F0F13]" : "bg-none"} `}
                 >
                   {menus?.icon}
                   <span className="ms-3">{menus?.pathname}</span>
