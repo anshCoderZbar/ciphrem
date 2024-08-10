@@ -7,7 +7,7 @@ export default function Profile() {
   return (
     <div className="bg-[#090909]">
       <div className="container mx-auto max-w-4xl px-2 py-5 sm:px-3 sm:py-7 md:px-4 md:py-8 lg:max-w-6xl lg:px-5 lg:py-9 xl:max-w-[1500px] xl:py-10">
-        <div className="grid grid-cols-2 gap-7">
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2 2xl:gap-7">
           <CharacterAvatar />
           <CharacterDetails />
         </div>
@@ -18,14 +18,14 @@ export default function Profile() {
 
 const CharacterAvatar = () => {
   return (
-    <div className="relative max-h-[810px] overflow-hidden rounded-2xl">
+    <div className="relative mx-auto max-h-[575px] max-w-[400px] overflow-hidden rounded-2xl xl:max-h-[500px] xl:max-w-full 2xl:max-h-[650px] 3xl:max-h-[800px]">
       <Image
         src={ASSETS.MONSTER_IMG}
         alt="monster"
         className="h-full w-full object-cover"
       />
-      <div className="gradient-border !absolute bottom-4 right-4 h-12 min-w-min !rounded-full md:h-14">
-        <button className="gradient-button !rounded-full !bg-white px-4 text-sm font-bold text-black md:px-6 2xl:text-base">
+      <div className="gradient-border !absolute bottom-4 right-4 h-12 min-w-min !rounded-full xl:h-14">
+        <button className="gradient-button !rounded-full !bg-white px-4 text-sm font-bold text-black md:px-6 xl:text-[15px] 2xl:text-base">
           Edit your Character
         </button>
       </div>
@@ -38,7 +38,7 @@ const CharacterDetails = () => {
     <div>
       <div className="w-full rounded-2xl border-2 border-[#2B2B2D] bg-[#0F0F13] p-3 sm:p-4 lg:p-5 2xl:p-7">
         <div className="flex items-start justify-between">
-          <h3 className="flex items-center gap-2 text-xl font-semibold text-white">
+          <h3 className="flex items-center gap-2 text-base font-semibold text-white md:text-lg 2xl:text-xl">
             1 Level
             <span className="gradient-text">
               <GradientArrow />
@@ -46,7 +46,7 @@ const CharacterDetails = () => {
           </h3>
           <div className="">
             <XP />
-            <p className="gradient-text mt-1 flex items-center gap-2 text-lg font-semibold">
+            <p className="gradient-text mt-1 flex items-center gap-2 text-[15px] font-semibold md:text-base 2xl:text-lg">
               1.5x Booster{" "}
               <span className="gradient-text">
                 <GradientArrow />
@@ -55,14 +55,14 @@ const CharacterDetails = () => {
           </div>
         </div>
         {/* progressbar */}
-        <div className="mt-8 h-4 w-full rounded-full bg-[#515151]">
+        <div className="mt-4 h-4 w-full rounded-full bg-[#515151] lg:mt-6 2xl:mt-8">
           <div
             className="gradient-background h-4 rounded-full"
             style={{ width: "15%" }}
           />
         </div>
         <div className="flex justify-end">
-          <p className="mt-3 text-lg font-semibold">
+          <p className="mt-3 text-sm font-semibold md:text-base 2xl:text-lg">
             <span className="text-white">990 </span>
             <span className="text-[#AEAEB2]"> / 1,000 XP</span>
           </p>
@@ -70,17 +70,23 @@ const CharacterDetails = () => {
       </div>
       <div className="mt-6 grid grid-cols-2 gap-4">
         <div className="w-full rounded-2xl border-2 border-[#2B2B2D] bg-[#0F0F13] p-3 sm:p-4 lg:p-5 2xl:p-6">
-          <h3 className="text-center text-3xl font-bold text-white">1</h3>
-          <p className="mt-2 text-center text-xl text-[#AEAEB2]">
+          <h3 className="text-center text-xl font-bold text-white md:text-2xl 2xl:text-3xl">
+            1
+          </h3>
+          <p className="text-center text-base text-[#AEAEB2] md:mt-2 md:text-lg 2xl:text-xl">
             Completed Quests
           </p>
         </div>
         <div className="w-full rounded-2xl border-2 border-[#2B2B2D] bg-[#0F0F13] p-3 sm:p-4 lg:p-5 2xl:p-6">
-          <h3 className="text-center text-3xl font-bold text-white">3</h3>
-          <p className="mt-2 text-center text-xl text-[#AEAEB2]">Reffered</p>
+          <h3 className="text-center text-xl font-bold text-white md:text-2xl 2xl:text-3xl">
+            3
+          </h3>
+          <p className="text-center text-base text-[#AEAEB2] md:mt-2 md:text-lg 2xl:text-xl">
+            Reffered
+          </p>
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-4 xl:mt-6">
         <div className="w-full rounded-2xl border-2 border-[#2B2B2D] bg-[#0F0F13] p-3 sm:p-4 lg:p-5 2xl:p-7">
           <h3 className="mb-5 flex items-center gap-2 text-xl font-semibold text-white">
             Rewards
@@ -95,7 +101,7 @@ const CharacterDetails = () => {
                   <Image
                     src={reward.img}
                     alt="reward_1"
-                    className="mx-auto h-full w-full max-w-20"
+                    className="mx-auto h-full w-full max-w-16 xl:max-w-20"
                   />
                 </div>
               );
@@ -103,10 +109,10 @@ const CharacterDetails = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-4 xl:mt-6">
         <div className="w-full rounded-2xl border-2 border-[#2B2B2D] bg-[#0F0F13] p-3 sm:p-4 lg:p-5 2xl:p-7">
           <div className="flex items-center justify-between">
-            <h3 className="flex items-center gap-2 text-xl font-semibold text-white">
+            <h3 className="flex items-center gap-2 text-base font-semibold text-white md:text-lg 2xl:text-xl">
               Player #1132
             </h3>
             <div className="gradient-border h-10 min-w-min !rounded-full md:h-12">
@@ -115,20 +121,20 @@ const CharacterDetails = () => {
               </button>
             </div>
           </div>
-          <div className="mt-7 flex flex-col gap-y-4">
+          <div className="mt-4 flex flex-col gap-y-3 md:mt-5 xl:mt-7 xl:gap-y-4">
             {new Array(5).fill(true).map((_, i) => {
               return (
                 <div
                   key={i}
-                  className="flex justify-between rounded-2xl border-2 border-[#2B2B2D] p-5 transition-all duration-300 hover:bg-black"
+                  className="flex justify-between rounded-2xl border-2 border-[#2B2B2D] p-4 transition-all duration-300 hover:bg-black xl:p-5"
                 >
-                  <div className="flex items-center gap-10">
-                    <h3 className="text-lg font-semibold text-white">
+                  <div className="flex items-center gap-4 md:gap-6 lg:gap-8 2xl:gap-10">
+                    <h3 className="text-base font-semibold text-white 2xl:text-lg">
                       Twitter
                     </h3>
                     <XP />
                   </div>
-                  <button className="rounded-full border-2 border-white px-5 text-base text-white transition-all duration-300 hover:bg-white hover:text-black">
+                  <button className="rounded-full border-2 border-white px-5 py-2 text-sm text-white transition-all duration-300 hover:bg-white hover:text-black lg:text-base">
                     Connect
                   </button>
                 </div>
@@ -148,7 +154,7 @@ const XP = () => {
         <div className="relative z-10">
           <Image src={ASSETS.STAR_ICON} className="w-6 md:w-9" alt="star" />
         </div>
-        <span className="relative right-1 rounded-e-xl bg-[#002542] px-4 text-sm font-medium text-white sm:right-2 sm:text-[15px]">
+        <span className="relative right-1 rounded-e-xl bg-[#002542] px-3 text-xs font-medium text-white sm:right-2 md:text-sm xl:px-4 xl:text-[15px]">
           10 xp
         </span>
       </div>
