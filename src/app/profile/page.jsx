@@ -73,7 +73,7 @@ const CharacterDetails = () => {
           <h3 className="text-center text-xl font-bold text-white md:text-2xl 2xl:text-3xl">
             1
           </h3>
-          <p className="text-center text-base text-[#AEAEB2] md:mt-2 md:text-lg 2xl:text-xl">
+          <p className="text-center text-[15px] text-[#AEAEB2] sm:text-base md:mt-2 md:text-lg 2xl:text-xl">
             Completed Quests
           </p>
         </div>
@@ -81,7 +81,7 @@ const CharacterDetails = () => {
           <h3 className="text-center text-xl font-bold text-white md:text-2xl 2xl:text-3xl">
             3
           </h3>
-          <p className="text-center text-base text-[#AEAEB2] md:mt-2 md:text-lg 2xl:text-xl">
+          <p className="text-center text-[15px] text-[#AEAEB2] sm:text-base md:mt-2 md:text-lg 2xl:text-xl">
             Reffered
           </p>
         </div>
